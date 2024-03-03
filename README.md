@@ -28,7 +28,7 @@ Use cv2.imshow to show the video
 End the program and close the output video window by pressing 'q'.
 
 ## Program:
-``` Python
+```
 ### Developed By:P.Hemasonica
 ### Register No:212222230048
 ```
@@ -123,6 +123,7 @@ cv2.destroyAllWindows()
 
 ![image](https://github.com/Hemasonica774/Image_Acqusition-_using_Web_Camera/assets/118361409/51f554d9-3df6-43cf-980e-140a8a3e3b2f)
 ```
+
 ### ii) Display the video
 ```
 ![image](https://github.com/Hemasonica774/Image_Acqusition-_using_Web_Camera/assets/118361409/b7d21f11-f18e-4604-9d79-641146eeb735)
