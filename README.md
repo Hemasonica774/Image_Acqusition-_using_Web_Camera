@@ -120,7 +120,7 @@ cv2.destroyAllWindows()
 ## Output
 
 ### i) Write the frame as JPG image
-```
+
 ![image](https://github.com/Hemasonica774/Image_Acqusition-_using_Web_Camera/assets/118361409/51f554d9-3df6-43cf-980e-140a8a3e3b2f)
 ```
 ### ii) Display the video
