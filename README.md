@@ -35,30 +35,28 @@ End the program and close the output video window by pressing 'q'.
 ```
 ## i) Write the frame as JPG file
 ```
-
 import cv2
-viedoCaptureObject=cv2.VideoCapture(0)
+obj = cv2.VideoCapture(0)
 while(True):
-    ret,frame=viedoCaptureObject.read()
-    cv2.imwrite("Fer.jpg",frame)
-    result=False
-viedoCaptureObject.release()
-cv2.destroyAllWindows()
-
+    cap,frame = obj.read()
+    cv2.imshow('Video.jpg',frame)
+    cv2.imwrite("Phone.jpg",frame)
+    if cv2.waitKey(1) == ord('q'):
+        break
+obj.release()
 ```
 
 ## ii) Display the video
 ```
-
-import numpy as np
 import cv2
-cap=cv2.VideoCapture(0)
-while True:
-    ret,frame=cap.read()
-    cv2.imshow('Car',frame)
-    if cv2.waitKey(1)==ord('q'):
+img = cv2.VideoCapture(0)
+while(True):
+    imagee,frame = img.read()
+    cv2.imshow('Video',frame)
+    cv2.imwrite("MY_Phone.jpg",frame)
+    if cv2.waitKey(1) == ord('q'):
         break
-cap.release()
+img.release()
 cv2.destroyAllWindows()
 
 ```
@@ -81,7 +79,7 @@ while True:
     image[height//2:, :width//2]=smaller_frame
     image[:height//2, width//2:]=smaller_frame
     image[height//2:, width//2:]=smaller_frame
-    cv2.imshow('212222230048_hema',image)
+    cv2.imshow('OSCAR ',image)
     if cv2.waitKey(1)==ord('q'):
         break
 cap.release()
@@ -95,20 +93,20 @@ cv2.destroyAllWindows()
 ## iv) Rotate and display the video
 ```
 
-import numpy as np
 import cv2
-cap=cv2.VideoCapture(0)
+import numpy as np
+cap = cv2.VideoCapture(0)
 while True:
-    ret,frame=cap.read()
-    width=int(cap.get(3))
-    height=int(cap.get(4))
-    image=np.zeros(frame.shape,np.uint8)
-    smaller_frame=cv2.resize(frame,(0,0),fx=0.5,fy=0.5)
-    image[:height//2, :width//2]=cv2.rotate(smaller_frame,cv2.ROTATE_180)
-    image[height//2:, :width//2]=smaller_frame
-    image[:height//2, width//2:]=cv2.rotate(smaller_frame,cv2.ROTATE_180)
-    image[height//2:, width//2:]=smaller_frame
-    cv2.imshow('212222230048_hema',image)
+    ret, frame = cap.read() 
+    width = int(cap.get(3))
+    height = int(cap.get(4))
+    image = np.zeros(frame.shape, np.uint8) 
+    smaller_frame = cv2.resize(frame, (0,0), fx = 0.5, fy=0.5)
+    image[:height//2, :width//2] = cv2.rotate(smaller_frame,cv2.ROTATE_180)
+    image[height//2:, :width//2] = smaller_frame 
+    image[:height//2, width//2:] = smaller_frame
+    image[height//2:, width//2:] = cv2.rotate(smaller_frame,cv2.ROTATE_180)
+    cv2.imshow('Video', image)
     if cv2.waitKey(1)==ord('q'):
         break
 cap.release()
@@ -120,24 +118,28 @@ cv2.destroyAllWindows()
 
 ### i) Write the frame as JPG image
 ``
-![image](https://github.com/Hemasonica774/Image_Acqusition-_using_Web_Camera/assets/118361409/fda734a9-15f8-495d-83b9-fe33f77830c8)
+![image](https://github.com/Hemasonica774/Image_Acqusition-_using_Web_Camera/assets/118361409/a5db800a-42d9-45c2-92ee-017cc0d5af9f)
 
 ``
 
 ### ii) Display the video
 ``
-![image](https://github.com/Hemasonica774/Image_Acqusition-_using_Web_Camera/assets/118361409/9b69cdfa-bcfb-47b9-90a7-999eeed92611)
+![image](https://github.com/Hemasonica774/Image_Acqusition-_using_Web_Camera/assets/118361409/67d694e8-ad38-4cbb-903c-c448e50f47af)
+
 
 ``
 
 ### iii) Display the video by resizing the window
 ``
-![image](https://github.com/Hemasonica774/Image_Acqusition-_using_Web_Camera/assets/118361409/659e9135-1380-4528-8a34-015ef481171b)
+![image](https://github.com/Hemasonica774/Image_Acqusition-_using_Web_Camera/assets/118361409/137c9ba9-2cdc-46ff-b491-97d1c69deb7c)
+
 
 ``
 ### iv) Rotate and display the video
 ``
-![image](https://github.com/Hemasonica774/Image_Acqusition-_using_Web_Camera/assets/118361409/117d9e88-73dc-4389-855b-1bbb9fc627ef)
+
+![image](https://github.com/Hemasonica774/Image_Acqusition-_using_Web_Camera/assets/118361409/4e02e86e-ed13-4f0e-a877-56825267eddc)
+
 
 ```
 
